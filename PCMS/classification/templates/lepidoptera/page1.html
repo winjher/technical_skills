@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content ="width=device-width ,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>BILA-BILA</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/CustomStyle.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <style>
+         .body{ background-color:white; }
+            #canvasHtml5{border:1px solid red; }
+            #canvasJavascript{border:1px solid blue; }
+            .btn:hover {
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            /* Style the search box inside the navigation bar */
+            .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+            }
+            .Profile {background-color: #4CAF50;} /* Green */
+            .Profile:hover {background-color: #46a049;}
+            
+            .Home {background-color: #ff9800;} /* Orange */
+            .Home:hover {background: #e68a00;}
+            
+            .About {background-color: #f44336;} /* Red */ 
+            .About:hover {background: #da190b;}
+            
+            .Culture {background-color: #e7e7e7;} /* Gray */ 
+            .Culture:hover {background: #ddd;}
+            
+            .Contact {background-color: #2196F3;} /* Blue */
+            .Contact:hover {background: #0b7dda;}
+           
+            .red-text {
+             color: red;
+             }
+
+            h2 {
+                font-family: Lobster, monospace;
+                font-size: 10x;
+                color: blue;
+            }
+
+            p {
+                font-size: 6;
+                font-family: monospace;
+            }
+
+            .thick-green-border {
+                border-color: green;
+                border-width: 10px;
+                border-style: solid;
+            }
+
+            .smaller-image {
+                width: 100px;
+            }
+
+            </style>
+            <script>
+                    window.onload=(function(){
+                     // add a canvas element using javascript
+                     var canvas=document.createElement('canvas');
+                     canvas.id='canvasJavascript';
+                    }); // end $(function(){});
+            </script>
+</head>
+<body>       
+
+<div class="jumboron text-center">
+        <hr>         <hr> 
+            
+            <button class="btn Profile">
+                <a href="page01.html">Profile</a>
+            </button>
+            <button class="btn Home">
+                <a href="home.html">Home</a>
+            </button>
+            <button class="btn Culture">
+                <a href="">Culture</a>
+            </button>
+            <button class="btn About">
+                <a href="">About</a>
+            </button>
+            <button class="btn Contact">
+                <a href="">Contact</a>
+            </button>
+<hr> 
+<div class="container">
+    
+            <select class="form-control" id="ddlCamera" onchange="ddlCameraSelectChanged()">
+                <option selected hidden value="">Create</option>
+                <option>Create new butterflies photos</option>
+                <option>Create new butterflies videos</option>
+            </select><br>
+		<div class = "row"> 
+            <div class="form-group"  col-md-4 col-sm-6 col-xs-12><br>
+           
+        
+                <form action="https://freebutterfliesphotoapp.com/submit-butterflies-photo">
+                        
+            <div class="container-fluid">
+             <div class="page-header" id="banner">
+                 <div class="row">
+                     <div class="col-lg-8 col-md-7 col-sm-6">
+                              <h1>Pupae</h1>
+                              <label for="Maximum Iterations" id="">Maximum Iterations: </label>
+                                <input type="number" id="" placeholder="Numbers" required><br>
+                                <label for="Training Data" id=""> Training Data:</label><br>
+                                <label for="Validation Data" id=""> Validation Data:</label><br>
+                                <label for="Augmentation" id="">  Augmentation </label>
+                              
+                       <select class="form-control" id="ddlAugmentation" onchange="ddlAugmentationSelectChanged()" name="Augmentation">
+                               <option selected hidden value="">Select from the list</option>
+                               <option value="Blur">Blur</option>
+                               <option value="Canny">Canny</option>
+                               <option value="Crop">Crop</option>
+                               <option value="Dilation">Dilation</option>
+                               <option value="Erode">Erode</option>
+                               <option value="Expose">Expose</option>
+                               <option value="Flip">Flip</option>
+                               <option value="Noise">Noise</option>
+                               <option value="Rotate">Rotate</option>
+                       </select>
+                    </div>
+
+                </div>
+
+             </div>
+
+           </div>
+                           <br>
+                    <label><input type="checkbox" name="Temperature" checked>Temperature</label><br>
+                    <label><input type="radio" name="Temperature" checked> Celsius </label>
+                    <label><input type="radio" name="Temperature"> Fahrenheit</label><br>
+                    <label><input type="checkbox" name="Butterflies" checked> Classifications and Stages</label><br>
+                    <label><input type="radio" name="Butterfly Stages" checked> Eggs </label>
+                    <label><input type="radio" name="Butterfly Stages"> Larvae</label>
+                    <label><input type="radio" name="Butterfly Stages" checked> Pupae </label>
+                    <label><input type="radio" name="Butterfly Stages"> Adult</label><br>
+                    <label><input type="checkbox" name="Hostplants"> Image fruits</label><br>
+                    <label><input type="checkbox" name="Butterflies"> Defects</label><br>
+                    <label><input type="checkbox" name="Severe disease"> Diseases</label><br>
+                    <label><input type="checkbox" name="Predators"> Predators</label><br>
+                    <label><input type="checkbox" name="Status"> Status</label><br> 
+                    <label><input type="radio" name="Health-sick" checked> Unhealthy </label>
+                    <label><input type="radio" name="Health-active"> Healthy</label><br>
+                    <label><input type="radio" name="Speech recognition"> Speech</label><br><br>
+                    <input type="text" placeholder="butterflies photo URL" required>
+                    <button type="submit">Submit</button><br>
+                    
+                    <p>Drop picture to begin training. <br><br>
+                        <button type="btn submit" value="submit"> 
+                        Training</button></p>
+
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- add a canvas element using html -->
+        <canvas id='canvasHtml5'>Drop picture here!</canvas>
+ </div>
+</body>
+</html>

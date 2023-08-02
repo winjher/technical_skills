@@ -1,0 +1,145 @@
+create table SubFamilies 
+create table Families 
+(
+Papilionidae varchar (255),
+Danaidae varchar (255), 
+Nympalidae varchar (255), 
+Satyridae varchar (255), 
+Lyceanidae varchar (255),
+Pieridae varchar(255),
+Hesperiidae varchar(255),
+Saturniidae varchar(255)
+
+)
+select * from Families
+select * from Papilionidae
+select * from Danaidae
+select * from Nympalidae
+select * from Lyceanidae
+select * from Pieridae
+select * from Hesperiidae
+select * from Saturniidae
+
+create table Species
+(
+species_id int primary key ,
+species_name varchar(255),
+species_scientific_name varchar(255),
+species_origin varchar(255), 
+species_common_name varchar(255),
+species_wings varchar(255), 
+species_family varchar(255), 
+species_sub_family varchar(255), 
+species_visited integer, 
+species_gender varchar(255), 
+species_monthly integer,
+species_population integer,
+species_ave_population integer
+)
+create table Hostplants
+(
+hosplants_id nvarchar(250), 
+hostplants_scientific_name varchar(255), 
+hostplants_common_name varchar(255), 
+hostplants_origin varchar(255),
+)
+create table Personal
+(
+breeder_id nvarchar(255), 
+first_name varchar(255), 
+middle_name varchar(255),
+last_name varchar(255),
+nationality varchar(255),
+birthday datetime, 
+place_of_birth varchar(255),
+country_region varchar(255),
+work varchar(255),
+breeder_year_started date,
+breeder_active varchar(255),
+breeder_local_price varchar(255)
+)
+
+table Register
+(
+First_Name varchar(255),
+Last_Name varchar(255),
+country_code integer,
+password varchar(255)
+)
+At least 6 characters and no spaces.
+Must not be blaclisted password.What's this?
+
+table Address
+(
+present_address varchar(255),
+additional_address_informtion,
+barangay varchar(255),
+city varchar(255),
+sate_provinvce varchar(255),
+zip_code integer,
+country_region varchar(255)
+
+)
+create table color_description(
+species_id integer,
+above_hw_color varchar(255),
+above_hwm_pattern (255),
+below_color_description varchar(255),
+below_pattern (255),
+above_fw_color
+above_fwm_pattern
+below_hw_color
+below_hwm_pattern
+below_fw_color
+below_fwm_pattern
+)
+create table qualityPupae(
+species_id integer,
+qualityPupae varchar(255)
+)
+create table season
+(
+breeding_season_id nvarchar(255),
+breeding_season varchar(255)
+origin_id integer
+location varchar(255)
+)
+create table Customer
+(
+Customer_id integer,
+Customer_lname varchar(255),
+Customer_fname varchar(255),
+Customer_mname varchar(255),
+Customer_home_address varchar(255),
+Customer_email varchar(255),
+Customer_contact_number integer,
+Customer_export_place varchar(255),
+Customer_export_price varchar(255),
+Customer_date_order datetime,
+Customer_number_of_ordered integer,
+Customer_item_ordered varchar(255)
+)
+create table Method_of_Payment
+(
+Method_of_Pay varchar(255),
+Account_Type varchar(255),
+VAT integer,
+Discount integer,
+Tax integer,
+)
+create table Collection_Items
+(
+collection_id integer,
+collection_items varchar(255),
+collection_description varchar(255),
+collection_level integer,
+collection_reorder datetime,
+collection_out_of_stock integer,
+collection_no_of_order integer,
+collection_cost integer,
+collection_action varchar(255),
+collection_total integer,
+collection_valid_form datetime,
+collection_date_expires datetime,
+collection_onsales varchar(255)
+)

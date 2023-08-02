@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content ="width=device-width ,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CustomStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+            .elem{
+                 background: blueviolet;
+                 width: 300px;
+                 height: 400px;
+                 margin: 20px auto;
+                 transition: 500ms linear
+            }
+            .elem:hover{
+                opacity: 0.5;
+            }
+     </style>
+</head>
+<body>
+    <div class="elem">
+	<article>
+         <form id="register" action="register" method="post">
+                <div class="col-lg-12 col-md-8 ">
+          <div class="container"  >
+            <fieldset><legend>Register</legend>
+
+             <div class="row" >
+                    <div class="col-lg-6">
+                            <div class="form-group" >  
+                                    <label for=email>Email</label>
+                                    <input type="email" id="email" autofocus required class="form-control" placeholder="Your Email">
+                                     
+                                   
+                                    <label for=pass1>Password</label>   
+                                    <input type="password" id="pass1" name="pass2" required class="form-control" placeholder="Your Password">
+									
+									<label for=pass2>Confirm Password</label>   
+                                    <input type="password" id="pass2" name="pass2" required class="form-control" placeholder="Confirm Password">
+                                           <br/>                           
+                                    <button class="btn" id="btnSUbmit" type="submit"><a href="home.html"><a href="page01.html">Submit</a></button>
+                                    
+                            </div>
+                    </div>                                       
+                            
+             </div>
+            </fieldset>	
+          </div> 
+       
+        </div>
+    </form>  
+</article>	
+</div>
+<script scr="js/bootstrap.min.js"></script>
+</body>
+</html>
