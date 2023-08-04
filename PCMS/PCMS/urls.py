@@ -25,8 +25,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # tell django to read urls.py in example app
     url(r'^', include('classification.urls')),
-    # url(r'^', include('segmentation.urls')),
-    # url(r'^', include('object_detection.urls')),
+    url(r'segmentation/', include('segmentation.urls')),
+    url(r'object_detection/', include('object_detection.urls')),
    
 ]
 

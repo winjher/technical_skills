@@ -25,5 +25,6 @@ urlpatterns = [
     path(r'^adddevice/$', views.adddevice, name='adddevice'), 
     path(r'^butterfly/$', views.butterfly, name='butterfly'),
     path(r'^camera/$', views.camera, name='camera'),
+    
 ]
 
